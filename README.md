@@ -2,6 +2,7 @@
 
 ### Modelagem e Diagramação de um Componente iPhone
 O desafio é modelar e diagramar uma representação UML do componente iPhone, ele deverá abranger as funcionalidades de reprodutor musica, aparelho telefonico e navegador na Internet.
+
 O projeto foi extendido alem do mínimo, implementando as classes Internet Explorer, iPod e Pessoa 
 
 #### Funcionalidades a Modelar
