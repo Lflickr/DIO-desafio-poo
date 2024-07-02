@@ -1,0 +1,58 @@
+@startuml "Diagrama de classes"
+
+interface ReprodutorMusical{
+    +tocar()
+    +pausar()
+    +selecionarMusica(String musica)
+}
+
+interface AparelhoTelefonico{
+    +ligar()
+    +atender()
+    +iniciarCorreioVoz()
+}
+
+interface NavegadorInternet{
+    +exibirPagina(String url)
+    +adicionarNovaAba()
+    +atualizarPagina()
+}
+
+class iPhone{
+    String Cor
+    String modelo 
+    int anoLancamento
+}
+
+class iPod{
+    String Cor
+    String modelo 
+    int anoLancamento
+}
+
+class InternetExplorer{
+    String versao
+}
+
+class Pessoa{
+    String nome 
+    int idade
+
+    +comprariPhone()
+    +comprariPod()
+    +abrirInternetExplorer()
+}
+
+NavegadorInternet <|-- iPhone
+AparelhoTelefonico <|-- iPhone
+ReprodutorMusical <|-- iPhone
+
+iPod --|> ReprodutorMusical
+
+InternetExplorer --|> NavegadorInternet
+
+Pessoa -- "0..*" iPhone : > tem
+Pessoa -- "0..*" iPod : > tem
+Pessoa -- "0..1" InternetExplorer : > tem
+
+@enduml
